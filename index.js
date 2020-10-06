@@ -61,12 +61,6 @@ client.connect(err => {
             res.send(result.deletedCount > 0);
           })
       })
-      app.delete('/deleteRegisteredTask/:id', (req, res) => {
-        eventRegisterCollection.deleteOne({ _id: ObjectId(req.params.id) })
-          .then(result => {
-            res.send(result.deletedCount > 0);
-          })
-      })
   })
   
 });
